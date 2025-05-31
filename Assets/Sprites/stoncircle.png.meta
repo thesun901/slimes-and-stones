@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stoncircle_0: -9207284392681496533
+      stoncircle_1: -4068356567690387220
+      stoncircle_2: 1816335488860939212
+      stoncircle_3: 8693927928466122451
+      stoncircle_4: 3810324875626201408
+      stoncircle_5: 2050999471932754351
+      stoncircle_6: 1203463764278020661
+      stoncircle_7: 8325552437044218421
+      stoncircle_8: -7205427527111596736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

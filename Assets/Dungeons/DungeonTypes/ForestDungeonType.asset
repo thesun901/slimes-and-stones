@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c607317b1c64b743832d23b99f6fdf6, type: 3}
+  m_Name: ForestDungeonType
+  m_EditorClassIdentifier: 
+  dungeonName: 
+  floorColor: {r: 0.6745098, g: 0.7607844, b: 0.63529414, a: 1}
+  decorSprites:
+  - {fileID: 7672064755138430786, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 689176432287940110, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: -3465110836789601462, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: -7163797405583273556, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: -1112349361429245251, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 2129779222011270706, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 6397742363319337115, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 4165128164306938461, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: -323903969209065456, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: -5937689324370487578, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: -2165935937957050944, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 2788575817972176465, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 4974348922224852886, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 6392840603695723863, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  - {fileID: 5894456973331927412, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
+  backgroundSprites:
+  - {fileID: -7443756053782179069, guid: 39ae8abf4bf3e684fb3acdb1b56cd7ce, type: 3}

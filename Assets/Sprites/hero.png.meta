@@ -123,19 +123,58 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero_0
+      name: hero_head
       rect:
         serializedVersion: 2
         x: 55
         y: 201
         width: 150
         height: 165
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.50407493, y: 0.077697664}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -149,15 +188,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_1
+      name: hero_eyes
       rect:
         serializedVersion: 2
-        x: 239
-        y: 311
-        width: 39
-        height: 38
+        x: 236
+        y: 316
+        width: 102
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,15 +210,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_2
+      name: hero_eyes_closed
       rect:
         serializedVersion: 2
-        x: 301
-        y: 314
-        width: 36
-        height: 34
+        x: 236
+        y: 259
+        width: 102
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,59 +232,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_3
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 273
-        width: 32
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 032f964c946f03240800000000000000
-      internalID: 4769582802073678384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_4
-      rect:
-        serializedVersion: 2
-        x: 307
-        y: 271
-        width: 31
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 64b68e3838875c060800000000000000
-      internalID: 6973112104302177094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hero_5
+      name: hero_arm_1
       rect:
         serializedVersion: 2
         x: 428
         y: 241
         width: 97
         height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.85841733, y: 0.5760285}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,15 +254,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_6
+      name: hero_arm_2
       rect:
         serializedVersion: 2
         x: 569
-        y: 245
+        y: 243
         width: 102
         height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.15563965, y: 0.52560204}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,15 +276,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_7
+      name: hero_leg_1
       rect:
         serializedVersion: 2
         x: 100
         y: 45
         width: 31
         height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.56937164, y: 0.8191383}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,15 +298,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_8
+      name: hero_leg_2
       rect:
         serializedVersion: 2
         x: 136
         y: 47
         width: 29
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5370783, y: 0.7662526}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,15 +320,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hero_9
+      name: hero_body
       rect:
         serializedVersion: 2
         x: 295
-        y: 87
-        width: 96
+        y: 85
+        width: 100
         height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57093716, y: 0.494311}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,7 +345,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: db23e74bd1e848d4c9622fc28e9b696b
     internalID: 0
     vertices: []
     indices: 
@@ -360,16 +355,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hero_0: 6983202077367773121
-      hero_1: 2165717997959944645
-      hero_2: -484125075312390652
       hero_3: 4769582802073678384
       hero_4: 6973112104302177094
-      hero_5: -7790536598922295408
-      hero_6: 6880510811088228608
-      hero_7: 1239997267041418887
-      hero_8: 9041744707722229347
-      hero_9: -2554558783982643705
+      hero_arm_1: -7790536598922295408
+      hero_arm_2: 6880510811088228608
+      hero_body: -2554558783982643705
+      hero_eyes: 2165717997959944645
+      hero_eyes_closed: -484125075312390652
+      hero_head: 6983202077367773121
+      hero_leg_1: 1239997267041418887
+      hero_leg_2: 9041744707722229347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

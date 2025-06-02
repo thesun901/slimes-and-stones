@@ -290,7 +290,7 @@ MonoBehaviour:
   roomParent: {fileID: 0}
   tileSize: 1
   dungeonType: {fileID: 11400000, guid: cf635b6c058e1624fb5ddc74a95d22fa, type: 2}
-  playerPrefab: {fileID: 873305242732491393, guid: f748298c3abe448469b050cd7b283f5d, type: 3}
+  playerPrefab: {fileID: 5334290260171137261, guid: f748298c3abe448469b050cd7b283f5d, type: 3}
 --- !u!4 &1718391514
 Transform:
   m_ObjectHideFlags: 0

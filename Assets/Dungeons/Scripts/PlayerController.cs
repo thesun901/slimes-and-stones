@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -13,11 +13,40 @@ public class PlayerController : MonoBehaviour
 
     public InputSystem_Actions inputActions;
 
+    [Header("Cosmetics")]
+    public Animator animator;
+    public GameObject cosmeticBoomerang;
+
+    [Header("Boomerang")]
+    public GameObject bulletBoomerang;
+    private GameObject bulletBoomerangInstance;
+    public BoomerangBehavior boomBehavior;
+
+    private bool isBoomerangReady;
+    private Vector2 attackDirection;
+
+
     private void Awake()
     {
+        isBoomerangReady = true;
         inputActions = new InputSystem_Actions();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
         inputActions.Player.Enable();
+        bulletBoomerangInstance = GameObject.Instantiate(bulletBoomerang);
+        boomBehavior = bulletBoomerangInstance.GetComponent<BoomerangBehavior>();
+        boomBehavior.playerController = this;
+        boomBehavior.player = this.transform;
+    }
+
+    private void Update()
+    {
+        Vector2 attackInput = inputActions.Player.AttackDirection.ReadValue<Vector2>();
+
+        if (attackInput.sqrMagnitude > 0.01f)
+        {
+            StartBoomerangAnimation();
+        }
     }
 
     void FixedUpdate()
@@ -26,6 +55,31 @@ public class PlayerController : MonoBehaviour
         Vector2 delta = moveInput * moveSpeed * Time.fixedDeltaTime;
         Vector2 newPos = rb.position + delta;
 
+        animator.SetFloat("speed", delta.sqrMagnitude);
+
         rb.MovePosition(newPos);
+    }
+
+
+    public void StartBoomerangAnimation()
+    {
+        if(isBoomerangReady)
+        {
+            animator.SetTrigger("throw");
+            isBoomerangReady = false;
+            attackDirection = inputActions.Player.AttackDirection.ReadValue<Vector2>();
+        }
+    }
+
+    public void ThrowBoomerang()
+    {
+        cosmeticBoomerang.SetActive(false);
+        boomBehavior.Throw(attackDirection);
+    }
+
+    public void CatchBoomerang()
+    {
+        cosmeticBoomerang.SetActive(true);
+        isBoomerangReady = true;
     }
 }

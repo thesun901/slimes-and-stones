@@ -45,6 +45,8 @@ public class SlimeAI : MonoBehaviour, IEnemyDamagable
         // 1) Inicjalizacja HP
         currentHealth = stats.maxHealth;
 
+        player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+
         // 2) Tworzymy instancje wszystkich stanów
         idleState = new SlimeIdleState(this);
         patrolState = new SlimePatrolState(this);

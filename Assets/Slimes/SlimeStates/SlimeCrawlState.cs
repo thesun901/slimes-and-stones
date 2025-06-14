@@ -48,7 +48,6 @@ public class SlimeCrawlState : SlimeState
 
     public override void ExitState()
     {
-        slime.animator.SetBool("isCrawling", false);
         if (slime.rb != null)
             slime.rb.linearVelocity = Vector2.zero;
     }

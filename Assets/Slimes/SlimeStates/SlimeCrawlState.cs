@@ -31,14 +31,12 @@ public class SlimeCrawlState : SlimeState
             return;
         }
 
-        // 3) Ruch pe�zaj�cy
         Vector2 vel = crawlDirection * slime.stats.crawlSpeed;
         if (slime.rb != null)
             slime.rb.linearVelocity = vel;
         else
             slime.transform.position += (Vector3)vel * Time.deltaTime;
 
-        // 4) Po pewnym czasie zako�cz crawl
         crawlTimer -= Time.deltaTime;
         if (crawlTimer <= 0f)
         {

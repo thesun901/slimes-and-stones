@@ -91,6 +91,7 @@ public class Room
 
                     GameObject decorGO = new GameObject($"Decor_{x}_{y}");
                     decorGO.transform.parent = tile.transform;
+                    decorGO.transform.localScale = new Vector3(0.5f, 0.5f, 1);
                     decorGO.transform.localPosition = Vector3.zero;
 
                     var sr = decorGO.AddComponent<SpriteRenderer>();

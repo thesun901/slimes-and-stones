@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private bool isBoomerangReady;
     private Vector2 attackDirection;
 
+    [Header("Stats")]
+    public int hp = 100;
+
 
     private void Awake()
     {
@@ -81,5 +84,10 @@ public class PlayerController : MonoBehaviour
     {
         cosmeticBoomerang.SetActive(true);
         isBoomerangReady = true;
+    }
+
+    public void RecieveDamage(int amount)
+    {
+        hp -= amount;
     }
 }

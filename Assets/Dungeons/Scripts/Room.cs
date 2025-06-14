@@ -106,12 +106,64 @@ public class Room
             }
         }
 
-        int borderPadding = 2;
+        HashSet<Vector2Int> doorTilePositions = new HashSet<Vector2Int>();
+
+        // Add doors to neighbors
+        foreach (var neighbor in Neighbors)
+        {
+            Vector2Int roomDim = new Vector2Int(
+                BaseRoomDimensions.x * Size.x,
+                BaseRoomDimensions.y * Size.y
+            );
+            Vector3 doorLocalPos = Vector3.zero;
+            Vector2Int doorTileCoord = Vector2Int.zero;
+            switch (neighbor.Direction)
+            {
+                case Direction.Up:
+                    doorTileCoord = new Vector2Int(roomDim.x / 2, roomDim.y);
+                    doorLocalPos = new Vector3((roomDim.x / 2f - 0.5f) * tileSize, (roomDim.y) * tileSize, 0);
+                    break;
+                case Direction.Down:
+                    doorTileCoord = new Vector2Int(roomDim.x / 2, -1);
+                    doorLocalPos = new Vector3((roomDim.x / 2f - 0.5f) * tileSize, -tileSize, 0);
+                    break;
+                case Direction.Left:
+                    doorTileCoord = new Vector2Int(-1, roomDim.y / 2);
+                    doorLocalPos = new Vector3(-tileSize, (roomDim.y / 2f - 0.5f) * tileSize, 0);
+                    break;
+                case Direction.Right:
+                    doorTileCoord = new Vector2Int(roomDim.x, roomDim.y / 2);
+                    doorLocalPos = new Vector3((roomDim.x) * tileSize, (roomDim.y / 2f - 0.5f) * tileSize, 0);
+                    break;
+            }
+            doorTilePositions.Add(doorTileCoord);
+
+            GameObject doorObj = GameObject.Instantiate(DungeonType.doorPrefab, RoomObject.transform);
+            doorObj.transform.localPosition = doorLocalPos;
+            Door doorScript = doorObj.GetComponent<Door>();
+            if (doorScript != null)
+            {
+                if (neighbor.Neighbor == null)
+                    Debug.LogError($"Neighbor.Neighbor is null for direction {neighbor.Direction} at room {Position}");
+                else
+                    Debug.Log($"Assigning ConnectedRoom for door at {Position} {neighbor.Direction} to {neighbor.Neighbor.Position}");
+
+
+                doorScript.ConnectedRoom = neighbor.Neighbor;
+                doorScript.Direction = neighbor.Direction;
+            }
+            else
+            {
+                Debug.LogError("Door prefab missing Door script!");
+            }
+        }
+
+        int borderPadding = 1;
         for (int x = -borderPadding; x < dim.x + borderPadding; x++)
         {
             for (int y = -borderPadding; y < dim.y + borderPadding; y++)
             {
-                if (x >= 0 && x < dim.x && y >= 0 && y < dim.y)
+                if (x >= 0 && x < dim.x && y >= 0 && y < dim.y || doorTilePositions.Contains(new Vector2Int(x, y)))
                     continue;
 
                 GameObject tile = GameObject.Instantiate(wallPrefab, RoomObject.transform);

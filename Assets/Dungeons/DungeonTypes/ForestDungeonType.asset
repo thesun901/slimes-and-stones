@@ -32,3 +32,6 @@ MonoBehaviour:
   - {fileID: 5894456973331927412, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
   backgroundSprites:
   - {fileID: -7443756053782179069, guid: 39ae8abf4bf3e684fb3acdb1b56cd7ce, type: 3}
+  levelWidth: 5
+  levelHeight: 5
+  doorPrefab: {fileID: 7988842860871455729, guid: 152fbabe05439f14da41ef31f9f25f6d, type: 3}

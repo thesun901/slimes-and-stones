@@ -7,4 +7,9 @@ public class DungeonType : ScriptableObject
     public Color floorColor = Color.white;
     public Sprite[] decorSprites;
     public Sprite[] backgroundSprites;
+
+    public int levelWidth;
+    public int levelHeight;
+
+    public GameObject doorPrefab;
 }

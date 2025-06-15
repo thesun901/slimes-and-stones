@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
@@ -31,6 +32,8 @@ public class DungeonManager : MonoBehaviour
         currentRoom = dungeonRooms[Vector2Int.zero];
         currentRoom.Load(tilePrefab, wallPrefab, roomParent, tileSize);
         SpawnPlayerInRoom(currentRoom);
+
+        MinimapController.Instance.InitializeMinimap(new DungeonMap(dungeonRooms.Keys.ToList(), GenerateRoomDoors(dungeonRooms)), currentRoom.Position);
     }
 
     void Update()
@@ -122,5 +125,35 @@ public class DungeonManager : MonoBehaviour
         Vector2 bottomLeft = roomOrigin - new Vector2(roomWidth, roomHeight) / 2f + new Vector2(tileSize / 2f, tileSize / 2f);
         Rect roomRect = new Rect(bottomLeft, new Vector2(roomWidth, roomHeight));
         controller.roomBounds = roomRect;
+
+        MinimapController.Instance.UpdateCurrentRoom(currentRoom.Position);
+    }
+
+    public static Dictionary<Vector2Int, HashSet<Vector2Int>> GenerateRoomDoors(Dictionary<Vector2Int, Room> dungeonRooms)
+    {
+        var doors = new Dictionary<Vector2Int, HashSet<Vector2Int>>();
+
+        foreach (var kvp in dungeonRooms)
+        {
+            Vector2Int roomPos = kvp.Key;
+            Room room = kvp.Value;
+
+            if (!doors.ContainsKey(roomPos))
+                doors[roomPos] = new HashSet<Vector2Int>();
+
+            // Ensure Room has a property or field for neighbors, e.g., List<Vector2Int> Neighbors
+            foreach (var neighbor in room.Neighbors)
+            {
+                var neighborPos = roomPos + neighbor.Direction.AsVector();
+                doors[roomPos].Add(neighborPos);
+
+                // Also add the reverse connection for completeness (undirected)
+                if (!doors.ContainsKey(neighborPos))
+                    doors[neighborPos] = new HashSet<Vector2Int>();
+                doors[neighborPos].Add(roomPos);
+            }
+        }
+
+        return doors;
     }
 }

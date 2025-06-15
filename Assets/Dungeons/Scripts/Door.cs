@@ -9,7 +9,6 @@ public class Door : MonoBehaviour
     {
         if (ConnectedRoom == null)
         {
-            Debug.LogWarning($"Door at {transform.parent?.name} with direction {Direction} has no connected room!");
             return;
         }
         var player = other.GetComponent<PlayerController>();

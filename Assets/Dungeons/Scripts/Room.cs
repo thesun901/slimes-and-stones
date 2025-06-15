@@ -142,20 +142,14 @@ public class Room
             GameObject doorObj = GameObject.Instantiate(DungeonType.doorPrefab, RoomObject.transform);
             doorObj.transform.localPosition = doorLocalPos;
             Door doorScript = doorObj.GetComponent<Door>();
-            if (doorScript != null)
-            {
-                if (neighbor.Neighbor == null)
-                    Debug.LogError($"Neighbor.Neighbor is null for direction {neighbor.Direction} at room {Position}");
-                else
-                    Debug.Log($"Assigning ConnectedRoom for door at {Position} {neighbor.Direction} to {neighbor.Neighbor.Position}");
 
+            doorScript.ConnectedRoom = neighbor.Neighbor;
+            doorScript.Direction = neighbor.Direction;
 
-                doorScript.ConnectedRoom = neighbor.Neighbor;
-                doorScript.Direction = neighbor.Direction;
-            }
-            else
+            var renderer = doorObj.GetComponent<Renderer>();
+            if (renderer != null)
             {
-                Debug.LogError("Door prefab missing Door script!");
+                renderer.material.color = DungeonType.floorColor * 0.9f;
             }
         }
 
@@ -232,4 +226,19 @@ public enum Direction
     Down,
     Left,
     Right
+}
+
+public static class DirectionExtensions
+{
+    public static Vector2Int AsVector(this Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.Up: return new Vector2Int(0, 1);
+            case Direction.Down: return new Vector2Int(0, -1);
+            case Direction.Left: return new Vector2Int(-1, 0);
+            case Direction.Right: return new Vector2Int(1, 0);
+            default: return Vector2Int.zero;
+        }
+    }
 }

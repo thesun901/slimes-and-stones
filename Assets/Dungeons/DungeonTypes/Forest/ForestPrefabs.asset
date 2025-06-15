@@ -19,3 +19,7 @@ MonoBehaviour:
     prefab: {fileID: 6505895078394981414, guid: daf7502dfe3e7494798324184930e84f, type: 3}
   - name: yellow_slime
     prefab: {fileID: 6416089627223035253, guid: 9b45dc4ed09502b4089e4102443c4e65, type: 3}
+  - name: boulder
+    prefab: {fileID: 5961983263258021235, guid: fe4b6c48ebd19d545bd8d7a4582c709b, type: 3}
+  - name: water
+    prefab: {fileID: 2219150613998538395, guid: 317a56e371e72ff4a989adff90e313de, type: 3}

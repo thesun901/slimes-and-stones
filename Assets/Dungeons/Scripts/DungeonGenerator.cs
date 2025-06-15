@@ -128,7 +128,7 @@ public class DungeonGenerator
                     {
                         var instance = GameObject.Instantiate(
                             prefab,
-                            new Vector3(obj.position.x * tileSize, obj.position.y * tileSize, 0) + offset,
+                            new Vector3(obj.position.x * tileSize, obj.position.y * tileSize, -1f) + offset,
                             Quaternion.identity
                         );
                         instance.SetActive(false);
@@ -143,7 +143,7 @@ public class DungeonGenerator
                     {
                         var instance = GameObject.Instantiate(
                             prefab,
-                            new Vector3(monster.position.x * tileSize, monster.position.y * tileSize, 0) + offset,
+                            new Vector3(monster.position.x * tileSize, monster.position.y * tileSize, -1f) + offset,
                             Quaternion.identity
                         );
                         instance.SetActive(false);

@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 1583739394521542792}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,7 +448,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4455208908831148071}
@@ -532,6 +532,9 @@ MonoBehaviour:
   cosmeticBoomerang: {fileID: 6972398668792967701}
   bulletBoomerang: {fileID: 4651051242975669253, guid: 385daa963910c3c439cad78dd4740295, type: 3}
   boomBehavior: {fileID: 0}
+  eyes: {fileID: 6832553468698860503}
+  body: {fileID: 8890723582516453647}
+  hp: 100
 --- !u!50 &3516322913799930745
 Rigidbody2D:
   serializedVersion: 5

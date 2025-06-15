@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private bool isBoomerangReady;
     private Vector2 attackDirection;
 
+    public GameObject eyes;
+    public GameObject body;
+
     [Header("Stats")]
     public int hp = 100;
 
@@ -59,6 +62,18 @@ public class PlayerController : MonoBehaviour
         Vector2 newPos = rb.position + delta;
 
         animator.SetFloat("speed", delta.sqrMagnitude);
+       
+        if(delta.x > 0)
+        {
+            body.transform.rotation = Quaternion.Euler(0, 0, 0);
+            eyes.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        if (delta.x < 0)
+        {
+            body.transform.rotation = Quaternion.Euler(0, 180, 0);
+            eyes.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
 
         rb.MovePosition(newPos);
     }

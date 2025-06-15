@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 42c542a73ae033541ba55d86bc7b01f4
+guid: fcf32ec7519187d49889cf889471a917
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9207284392681496533
-    second: stoncircle_0
+      213: 2807548766200926727
+    second: runes_0
   - first:
-      213: -4068356567690387220
-    second: stoncircle_1
+      213: -1667735088815940429
+    second: runes_1
   - first:
-      213: 1816335488860939212
-    second: stoncircle_2
+      213: -1572856820912322875
+    second: runes_2
   - first:
-      213: 8693927928466122451
-    second: stoncircle_3
+      213: -539719522812852101
+    second: runes_3
   - first:
-      213: 3810324875626201408
-    second: stoncircle_4
+      213: -577655725520609548
+    second: runes_4
   - first:
-      213: 2050999471932754351
-    second: stoncircle_5
+      213: 2997031181239992936
+    second: runes_5
   - first:
-      213: 1203463764278020661
-    second: stoncircle_6
+      213: -1909671621249873523
+    second: runes_6
   - first:
-      213: 8325552437044218421
-    second: stoncircle_7
+      213: 4560103841373409822
+    second: runes_7
   - first:
-      213: -7205427527111596736
-    second: stoncircle_8
+      213: -1327321675649086142
+    second: runes_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,199 +124,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stoncircle_0
+      name: runes_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 636
-        width: 113
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b20a83c80a7293080800000000000000
-      internalID: -9207284392681496533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stoncircle_1
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 630
-        width: 135
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce0ef2bb14b4a87c0800000000000000
-      internalID: -4068356567690387220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stoncircle_2
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 626
-        width: 48
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc3ed76f08be43910800000000000000
-      internalID: 1816335488860939212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stoncircle_3
-      rect:
-        serializedVersion: 2
-        x: 445
-        y: 629
-        width: 50
-        height: 113
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d62217736907a870800000000000000
-      internalID: 8693927928466122451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stoncircle_4
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 619
-        width: 68
+        x: 3
+        y: 385
+        width: 117
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 041c882594ef0e430800000000000000
-      internalID: 3810324875626201408
+      spriteID: 7021ef25aba66f620800000000000000
+      internalID: 2807548766200926727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stoncircle_5
+      name: runes_1
       rect:
         serializedVersion: 2
-        x: 660
-        y: 575
-        width: 230
-        height: 365
+        x: 151
+        y: 383
+        width: 117
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa9c01f272d967c10800000000000000
-      internalID: 2050999471932754351
+      spriteID: 3bcdba3d5c30bd8e0800000000000000
+      internalID: -1667735088815940429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stoncircle_6
+      name: runes_2
       rect:
         serializedVersion: 2
-        x: 50
-        y: 156
-        width: 161
-        height: 393
+        x: 300
+        y: 385
+        width: 117
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53a88d9daef83b010800000000000000
-      internalID: 1203463764278020661
+      spriteID: 5c688f20e071c2ae0800000000000000
+      internalID: -1572856820912322875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stoncircle_7
+      name: runes_3
       rect:
         serializedVersion: 2
-        x: 388
-        y: 246
-        width: 86
-        height: 266
+        x: 9
+        y: 232
+        width: 117
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53a88e0b4dd4a8370800000000000000
-      internalID: 8325552437044218421
+      spriteID: b78856c14f78288f0800000000000000
+      internalID: -539719522812852101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stoncircle_8
+      name: runes_4
       rect:
         serializedVersion: 2
-        x: 615
-        y: 160
-        width: 144
-        height: 332
+        x: 156
+        y: 232
+        width: 117
+        height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04521bf07dd210c90800000000000000
-      internalID: -7205427527111596736
+      spriteID: 4fe9fdd9d21cbf7f0800000000000000
+      internalID: -577655725520609548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runes_5
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 231
+        width: 117
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862449afaf7979920800000000000000
+      internalID: 2997031181239992936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runes_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 87
+        width: 117
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89c1c147cb7f75e0800000000000000
+      internalID: -1909671621249873523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runes_7
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 93
+        width: 117
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12d4f3884eb84f30800000000000000
+      internalID: 4560103841373409822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runes_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 94
+        width: 117
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d824ce7f7649de0800000000000000
+      internalID: -1327321675649086142
       vertices: []
       indices: 
       edges: []
@@ -325,7 +325,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6d49d896324a33a4088034d016da5607
     internalID: 0
     vertices: []
     indices: 
@@ -335,15 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stoncircle_0: -9207284392681496533
-      stoncircle_1: -4068356567690387220
-      stoncircle_2: 1816335488860939212
-      stoncircle_3: 8693927928466122451
-      stoncircle_4: 3810324875626201408
-      stoncircle_5: 2050999471932754351
-      stoncircle_6: 1203463764278020661
-      stoncircle_7: 8325552437044218421
-      stoncircle_8: -7205427527111596736
+      runes_0: 2807548766200926727
+      runes_1: -1667735088815940429
+      runes_2: -1572856820912322875
+      runes_3: -539719522812852101
+      runes_4: -577655725520609548
+      runes_5: 2997031181239992936
+      runes_6: -1909671621249873523
+      runes_7: 4560103841373409822
+      runes_8: -1327321675649086142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

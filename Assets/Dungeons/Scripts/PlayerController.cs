@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     [Header("Stats")]
     public int hp = 100;
 
-
     private void Awake()
     {
         isBoomerangReady = true;
@@ -40,6 +39,8 @@ public class PlayerController : MonoBehaviour
         boomBehavior = bulletBoomerangInstance.GetComponent<BoomerangBehavior>();
         boomBehavior.playerController = this;
         boomBehavior.player = this.transform;
+
+        inputActions.Player.FinishDungeon.performed += context => OpenExitMenu();
     }
 
     private void Update()
@@ -89,5 +90,10 @@ public class PlayerController : MonoBehaviour
     public void RecieveDamage(int amount)
     {
         hp -= amount;
+    }
+
+    private void OpenExitMenu()
+    {
+        DungeonMenuUI.Instance.gameObject.SetActive(true);
     }
 }

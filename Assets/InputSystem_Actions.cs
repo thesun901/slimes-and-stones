@@ -180,6 +180,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FinishDungeon"",
+                    ""type"": ""Button"",
+                    ""id"": ""482a3270-4d3f-4401-b039-fb85f7a9cf43"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=3)"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -578,6 +587,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""AttackDirection"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""53dcd6e3-c6b0-4164-a750-b0648f732a47"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FinishDungeon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1173,6 +1193,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_AttackDirection = m_Player.FindAction("AttackDirection", throwIfNotFound: true);
+        m_Player_FinishDungeon = m_Player.FindAction("FinishDungeon", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1276,6 +1297,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Next;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_AttackDirection;
+    private readonly InputAction m_Player_FinishDungeon;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1327,6 +1349,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/AttackDirection".
         /// </summary>
         public InputAction @AttackDirection => m_Wrapper.m_Player_AttackDirection;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/FinishDungeon".
+        /// </summary>
+        public InputAction @FinishDungeon => m_Wrapper.m_Player_FinishDungeon;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1383,6 +1409,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @AttackDirection.started += instance.OnAttackDirection;
             @AttackDirection.performed += instance.OnAttackDirection;
             @AttackDirection.canceled += instance.OnAttackDirection;
+            @FinishDungeon.started += instance.OnFinishDungeon;
+            @FinishDungeon.performed += instance.OnFinishDungeon;
+            @FinishDungeon.canceled += instance.OnFinishDungeon;
         }
 
         /// <summary>
@@ -1424,6 +1453,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @AttackDirection.started -= instance.OnAttackDirection;
             @AttackDirection.performed -= instance.OnAttackDirection;
             @AttackDirection.canceled -= instance.OnAttackDirection;
+            @FinishDungeon.started -= instance.OnFinishDungeon;
+            @FinishDungeon.performed -= instance.OnFinishDungeon;
+            @FinishDungeon.canceled -= instance.OnFinishDungeon;
         }
 
         /// <summary>
@@ -1794,6 +1826,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAttackDirection(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FinishDungeon" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFinishDungeon(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

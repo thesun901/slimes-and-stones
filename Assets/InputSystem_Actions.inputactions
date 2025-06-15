@@ -94,6 +94,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "FinishDungeon",
+                    "type": "Button",
+                    "id": "482a3270-4d3f-4401-b039-fb85f7a9cf43",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold(duration=3)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -492,6 +501,17 @@
                     "action": "AttackDirection",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "53dcd6e3-c6b0-4164-a750-b0648f732a47",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FinishDungeon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

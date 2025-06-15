@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c607317b1c64b743832d23b99f6fdf6, type: 3}
   m_Name: ForestDungeonType
   m_EditorClassIdentifier: 
-  dungeonName: 
+  dungeonName: Forest
   floorColor: {r: 0.6745098, g: 0.7607844, b: 0.63529414, a: 1}
   decorSprites:
   - {fileID: 7672064755138430786, guid: 806a399e1afaed649bf46f93b7ef19a1, type: 3}
@@ -35,3 +35,4 @@ MonoBehaviour:
   levelWidth: 5
   levelHeight: 5
   doorPrefab: {fileID: 7988842860871455729, guid: 152fbabe05439f14da41ef31f9f25f6d, type: 3}
+  PrefabLibrary: {fileID: 11400000, guid: 07f1591589c8fef4880f4f9089076ebe, type: 2}

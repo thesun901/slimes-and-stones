@@ -535,7 +535,6 @@ MonoBehaviour:
   eyes: {fileID: 6832553468698860503}
   body: {fileID: 8890723582516453647}
   hp: 100
---- !u!50 &3516322913799930745
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0

@@ -12,4 +12,6 @@ public class DungeonType : ScriptableObject
     public int levelHeight;
 
     public GameObject doorPrefab;
+
+    public PrefabLibrary PrefabLibrary;
 }

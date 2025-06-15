@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DungeonGenerator
@@ -99,6 +102,56 @@ public class DungeonGenerator
             }
         }
         rooms[endRoomPos].IsEndRoom = true;
+
+        string path = $"Room Layouts/{dungeonType.dungeonName}";
+        RoomLayout[] layouts = Resources.LoadAll<RoomLayout>(path);
+
+        foreach (var room in rooms)
+        {
+            var possibleLayouts = layouts.ToList()
+                .Where(layout => layout.size == room.Value.Size)
+                .ToArray();
+
+            if (possibleLayouts.Length > 0)
+            {
+                Vector2Int dim = new Vector2Int(Room.BaseRoomDimensions.x * room.Value.Size.x, Room.BaseRoomDimensions.y * room.Value.Size.y);
+                float tileSize = 1f;
+                Vector3 offset = new Vector3(-dim.x * tileSize / 2f + tileSize / 2f, -dim.y * tileSize / 2f + tileSize / 2f, 0);
+
+                int layout = Random.Range(0, possibleLayouts.Length);
+                var chosenLayout = possibleLayouts[layout];
+
+                foreach (var obj in chosenLayout.obstacles)
+                {
+                    var prefab = dungeonType.PrefabLibrary.GetPrefab(obj.objectType);
+                    if (prefab != null)
+                    {
+                        var instance = GameObject.Instantiate(
+                            prefab,
+                            new Vector3(obj.position.x * tileSize, obj.position.y * tileSize, 0) + offset,
+                            Quaternion.identity
+                        );
+                        instance.SetActive(false);
+                        room.Value.EntityInstances.Add(instance);
+                    }
+                }
+
+                foreach (var monster in chosenLayout.monsters)
+                {
+                    var prefab = dungeonType.PrefabLibrary.GetPrefab(monster.objectType);
+                    if (prefab != null)
+                    {
+                        var instance = GameObject.Instantiate(
+                            prefab,
+                            new Vector3(monster.position.x * tileSize, monster.position.y * tileSize, 0) + offset,
+                            Quaternion.identity
+                        );
+                        instance.SetActive(false);
+                        room.Value.EntityInstances.Add(instance);
+                    }
+                }
+            }
+        }
 
         return rooms;
     }

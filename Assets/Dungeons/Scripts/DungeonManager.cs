@@ -26,11 +26,15 @@ public class DungeonManager : MonoBehaviour
 
     void Start()
     {
+        playerInstance = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        playerInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
         DungeonGenerator generator = new DungeonGenerator();
         dungeonRooms = generator.GenerateDungeon(dungeonType);
 
         currentRoom = dungeonRooms[Vector2Int.zero];
         currentRoom.Load(tilePrefab, wallPrefab, roomParent, tileSize);
+
         SpawnPlayerInRoom(currentRoom);
 
         MinimapController.Instance.InitializeMinimap(new DungeonMap(dungeonRooms.Keys.ToList(), GenerateRoomDoors(dungeonRooms)), currentRoom.Position);
@@ -59,8 +63,6 @@ public class DungeonManager : MonoBehaviour
 
         // Spawn player at the center of the room
         Vector3 spawnPos = currentRoom.RoomObject.transform.position;
-        playerInstance = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
-        playerInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
         // Set bounds for the player
         var controller = playerInstance.GetComponent<PlayerController>();

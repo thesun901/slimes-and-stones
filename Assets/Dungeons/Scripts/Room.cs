@@ -8,9 +8,10 @@ public class Room
     public bool IsEndRoom { get; set; } = false;
     public Room MasterRoom { get; set; } = null;
     public List<RoomNeighbor> Neighbors { get; private set; } = new List<RoomNeighbor>();
-    public GameObject RoomObject { get; set; }
     public DungeonType DungeonType { get; set; }
     public static readonly Vector2Int BaseRoomDimensions = new Vector2Int(13, 7);
+    public GameObject RoomObject { get; set; }
+    public List<GameObject> EntityInstances = new List<GameObject>();
 
     public Room(int x, int y)
     {
@@ -36,6 +37,12 @@ public class Room
 
     public void Unload()
     {
+        EntityInstances.RemoveAll(instance => instance == null);
+        foreach (var instance in EntityInstances)
+        {
+            instance.SetActive(false);
+        }
+
         if (RoomObject != null)
             GameObject.Destroy(RoomObject);
     }
@@ -204,6 +211,12 @@ public class Room
                     sr.sortingOrder = 9 + (int)(tileRandom.NextDouble() * 3);
                 }
             }
+        }
+
+        foreach (var entity in EntityInstances)
+        {
+            if (entity != null)
+                entity.SetActive(true);
         }
     }
 }

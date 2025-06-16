@@ -29,7 +29,5 @@ MonoBehaviour:
   monsters:
   - objectType: green_slime
     position: {x: 2, y: 3}
-  - objectType: blue_slime
-    position: {x: 6, y: 3}
   - objectType: yellow_slime
     position: {x: 10, y: 3}

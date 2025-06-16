@@ -27,9 +27,7 @@ MonoBehaviour:
   - objectType: boulder
     position: {x: 11, y: 6}
   monsters:
-  - objectType: green_slime
-    position: {x: 6, y: 3}
-  - objectType: yellow_slime
-    position: {x: 1, y: 1}
   - objectType: blue_slime
     position: {x: 9, y: 5}
+  - objectType: blue_slime
+    position: {x: 1, y: 1}

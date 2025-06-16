@@ -31,5 +31,3 @@ MonoBehaviour:
     position: {x: 3, y: 3}
   - objectType: yellow_slime
     position: {x: 9, y: 2}
-  - objectType: blue_slime
-    position: {x: 6, y: 5}

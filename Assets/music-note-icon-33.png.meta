@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      music-note-icon-33_0: 7926886892649303519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

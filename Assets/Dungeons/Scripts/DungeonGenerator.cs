@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
+using static Unity.Collections.Unicode;
 
 public class DungeonGenerator
 {
@@ -108,16 +109,35 @@ public class DungeonGenerator
 
         foreach (var room in rooms)
         {
+            Vector2Int dim = new Vector2Int(Room.BaseRoomDimensions.x * room.Value.Size.x, Room.BaseRoomDimensions.y * room.Value.Size.y);
+            float tileSize = 1f;
+            Vector3 offset = new Vector3(-dim.x * tileSize / 2f + tileSize / 2f, -dim.y * tileSize / 2f + tileSize / 2f, 0);
+
+            if (room.Value.Position == new Vector2Int(0, 0))
+                continue;
+
             var possibleLayouts = layouts.ToList()
                 .Where(layout => layout.size == room.Value.Size)
                 .ToArray();
 
+            if (room.Value.IsEndRoom)
+            {
+                var prefab = dungeonType.PrefabLibrary.GetPrefab("rune_1");
+                if (prefab != null)
+                {
+                    var instance = GameObject.Instantiate(
+                        prefab,
+                        new Vector3(6 * tileSize, 3 * tileSize, -1f) + offset,
+                        Quaternion.identity
+                    );
+                    instance.SetActive(false);
+                    room.Value.EntityInstances.Add(instance);
+                }
+                continue;
+            }
+
             if (possibleLayouts.Length > 0)
             {
-                Vector2Int dim = new Vector2Int(Room.BaseRoomDimensions.x * room.Value.Size.x, Room.BaseRoomDimensions.y * room.Value.Size.y);
-                float tileSize = 1f;
-                Vector3 offset = new Vector3(-dim.x * tileSize / 2f + tileSize / 2f, -dim.y * tileSize / 2f + tileSize / 2f, 0);
-
                 int layout = Random.Range(0, possibleLayouts.Length);
                 var chosenLayout = possibleLayouts[layout];
 

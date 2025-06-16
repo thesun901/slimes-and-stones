@@ -23,3 +23,11 @@ MonoBehaviour:
     prefab: {fileID: 5961983263258021235, guid: fe4b6c48ebd19d545bd8d7a4582c709b, type: 3}
   - name: water
     prefab: {fileID: 2219150613998538395, guid: 317a56e371e72ff4a989adff90e313de, type: 3}
+  - name: rune_1
+    prefab: {fileID: 823298029627566043, guid: 17d4c86e198c9d644b2c19b4944b2177, type: 3}
+  - name: rune_2
+    prefab: {fileID: 8901904799003137633, guid: 473140747b9c9f547ba2efa5c314494d, type: 3}
+  - name: rune_3
+    prefab: {fileID: 3916581121701089509, guid: 21b7af3992237f1488206fca065bd47a, type: 3}
+  - name: rune_4
+    prefab: {fileID: 1726955287855246934, guid: 759ee53f24ca5744087df18cbcfddec7, type: 3}

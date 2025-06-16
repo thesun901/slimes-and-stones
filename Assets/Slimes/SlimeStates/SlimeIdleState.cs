@@ -47,6 +47,6 @@ public class SlimeIdleState : SlimeState
 
     public override void ExitState()
     {
-        slime.animator.SetBool("isIdle", false);
+
     }
 }

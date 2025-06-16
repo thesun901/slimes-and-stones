@@ -33,7 +33,7 @@ public class SlimeAI : MonoBehaviour, IEnemyDamagable
 
     private SlimeState currentState;
 
-
+    public GameObject rune;
     public GameObject projectilePrefab;    // prefab pocisku
     public Transform firePoint;            // punkt, z którego wychodzi pocisk
 
@@ -128,10 +128,16 @@ private void Update()
 
     private void Die()
     {
-        animator.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-        Destroy(gameObject, 1f);
+
+        float r = Random.Range(0f, 1f);
+        if (r <= 0.05f)
+        {
+            GameObject.Instantiate(rune, this.transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
     }
 
     public SlimeState GetMovementState()

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: d
   displayName: ddd
-  description: adsadasd
+  description: you feel faster
   icon: {fileID: -577655725520609548, guid: fcf32ec7519187d49889cf889471a917, type: 3}

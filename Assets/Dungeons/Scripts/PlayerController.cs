@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
     public void RecieveDamage(int amount)
     {
         hp -= amount;
+        animator.SetTrigger("damaged");
     }
 
     private void OpenExitMenu()

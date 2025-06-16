@@ -14,7 +14,7 @@ public class DungeonMenuUI : MonoBehaviour
 
     public void ExitDungeon()
     {
-        Debug.Log("Exiting Dungeon...");
+        SceneManager.LoadScene("StoneCircleScene", LoadSceneMode.Single);
     }
 
     public void CloseMenu()

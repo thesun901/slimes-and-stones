@@ -245,6 +245,7 @@ MonoBehaviour:
     microJumpForce: 4.24
     microJumpInterval: 0.34
   currentHealth: 0
+  rune: {fileID: 8901904799003137633, guid: 473140747b9c9f547ba2efa5c314494d, type: 3}
   projectilePrefab: {fileID: 0}
   firePoint: {fileID: 6019894033172937811}
 --- !u!50 &4677722884789311172

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rune1 1
   m_EditorClassIdentifier: 
   id: b
-  displayName: bbb
-  description: asdasd
+  displayName: Tired Boomerang Rune
+  description: Boomerang flies faster forward but slower backward
   icon: {fileID: -1572856820912322875, guid: fcf32ec7519187d49889cf889471a917, type: 3}

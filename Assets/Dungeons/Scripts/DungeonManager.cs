@@ -16,18 +16,26 @@ public class DungeonManager : MonoBehaviour
 
     private Dictionary<Vector2Int, Room> dungeonRooms;
     private Room currentRoom;
+    private PlayerController playerController;
+    public GameObject diePanel;
 
     public static DungeonManager Instance { get; private set; }
 
     void Awake()
     {
+        diePanel.SetActive(false);
         Instance = this;
+        if(Time.timeScale < 1.0f)
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 
     void Start()
     {
         playerInstance = Instantiate(playerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         playerInstance.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
 
         DungeonGenerator generator = new DungeonGenerator();
         dungeonRooms = generator.GenerateDungeon(dungeonType);
@@ -42,7 +50,11 @@ public class DungeonManager : MonoBehaviour
 
     void Update()
     {
-        
+        if(playerController.hp <= 0)
+        {
+            Time.timeScale = 0;
+            diePanel.SetActive(true);
+        }
     }
 
     void SpawnPlayerInRoom(Room currentRoom)

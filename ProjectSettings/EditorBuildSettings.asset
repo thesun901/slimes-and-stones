@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Settings/Scenes/Cutscene.unity
+    guid: a9c99d55efe739e46b62147a29ec6d7a
+  - enabled: 1
+    path: Assets/Settings/Scenes/Menu.unity
+    guid: 51186225928bbe94eaa6fb7a254d75e2
+  - enabled: 1
+    path: Assets/Settings/Scenes/StoneCircleScene.unity
+    guid: 5fb3defd40360d541a1638d8a319e053
+  - enabled: 1
+    path: Assets/Settings/Scenes/DungeonScene.unity
+    guid: 1fd9f0a59d3b3c34fb20a439ab1edcfb
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:

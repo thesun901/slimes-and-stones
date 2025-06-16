@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rune1
   m_EditorClassIdentifier: 
   id: a
-  displayName: aaa
-  description: ccsvsdf
+  displayName: Health Rune
+  description: adds 100 health at the start of a game
   icon: {fileID: -1667735088815940429, guid: fcf32ec7519187d49889cf889471a917, type: 3}

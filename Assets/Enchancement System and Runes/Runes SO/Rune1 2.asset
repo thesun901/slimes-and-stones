@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rune1 2
   m_EditorClassIdentifier: 
   id: c
-  displayName: ccc
-  description: dasdasd
+  displayName: Second Attack Rune
+  description: Boomerang deals less damage attacking forward but much more damage
+    when coming back
   icon: {fileID: -539719522812852101, guid: fcf32ec7519187d49889cf889471a917, type: 3}

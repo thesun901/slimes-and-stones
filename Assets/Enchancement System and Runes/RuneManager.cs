@@ -34,6 +34,8 @@ public class RuneManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
+        if(Time.timeScale < 1) Time.timeScale = 1;
+
         savePath = Path.Combine(Application.persistentDataPath, "runes.json");
         LoadRunes();
         RefreshUI();
@@ -141,6 +143,8 @@ public class RuneManager : MonoBehaviour
     /// </summary>
     public void RefreshUI()
     {
+        if(activeRunesPanel == null || inventoryPanel == null) return;
+
         // 1) Clear all panels
 
         foreach (Transform slot in activeRunesPanel)
